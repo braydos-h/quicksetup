@@ -6,6 +6,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 set -e
+set -o pipefail
 
 echo "Updating and upgrading system..."
 sudo apt update && sudo apt upgrade -y
